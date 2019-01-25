@@ -1,0 +1,160 @@
+/* Style Play Button */
+#PlayButton {
+    -fx-background-image: url("../images/PlayButton.png");
+    -fx-background-size: 38 38 ;
+    -fx-background-repeat: no-repeat ;
+    -fx-background-position: center ;
+    -fx-background-color:transparent ;
+}
+#PlayButton:hover{
+    -fx-background-color:#dae7f3;
+    
+}
+
+/* Style Pause Button */
+#PauseButton {
+    -fx-background-image: url("../images/PauseButton.png");
+    -fx-background-size: 38 38 ;
+    -fx-background-repeat: no-repeat ;
+    -fx-background-position: center ;
+    -fx-background-color:transparent ;
+}
+#PauseButton:hover{
+    -fx-background-color:#dae7f3;
+    
+}
+
+/* Style Stop Button */
+#StopButton {
+    -fx-background-image: url("../images/StopButton.png");
+    -fx-background-size: 38 38 ;
+    -fx-background-repeat: no-repeat ;
+    -fx-background-position: center ;
+    -fx-background-color:transparent ;
+}
+#StopButton:hover{
+    -fx-background-color:#dae7f3;
+    
+}
+/* Style slower Video Button */
+#SlowerVideoButton {
+    -fx-background-image: url("../images/SlowerVideoButton.png");
+    -fx-background-size: 38 38 ;
+    -fx-background-repeat: no-repeat ;
+    -fx-background-position: center ;
+    -fx-background-color:transparent ;
+}
+#SlowerVideoButton:hover{
+    -fx-background-color:#dae7f3;
+    
+}
+/* Style Slow Video Button */
+#SlowVideoButton {
+    -fx-background-image: url("../images/SlowVideoButton.png");
+    -fx-background-size: 38 38 ;
+    -fx-background-repeat: no-repeat ;
+    -fx-background-position: center ;
+    -fx-background-color:transparent ;
+}
+#SlowVideoButton:hover{
+    -fx-background-color:#dae7f3;
+    
+}
+
+/* Style Faster Video Button */
+#FasterVideoButton {
+    -fx-background-image: url("../images/FasterVideoButton.png");
+    -fx-background-size: 38 38 ;
+    -fx-background-repeat: no-repeat ;
+    -fx-background-position: center ;
+    -fx-background-color:transparent ;
+}
+#FasterVideoButton:hover{
+    -fx-background-color:#dae7f3;
+    
+}
+
+/* Style Fast Video Button */
+#FastVideoButton {
+    -fx-background-image: url("../images/FastVideoButton.png");
+    -fx-background-size: 38 38 ;
+    -fx-background-repeat: no-repeat ;
+    -fx-background-position: center ;
+    -fx-background-color:transparent ;
+}
+#FastVideoButton:hover{
+    -fx-background-color:#dae7f3;
+
+}
+
+/**/
+#SoundSliderIcon {
+    -fx-background-image: url("../images/SoundSliderIcon.png");
+    -fx-background-size: 16 16 ;
+    -fx-background-repeat: no-repeat ;
+    -fx-background-position: center ;
+}
+
+/* Sound Slider */
+.slider .track {
+    -fx-control-inner-background: palegreen;
+  
+}
+/* Video container Pane*/
+#pane{
+  -fx-background-color: black;
+  -fx-background-image: url("../images/iconeKMedia.png");
+  -fx-background-repeat: no-repeat ;
+  -fx-background-position: center ;
+}
+
+/* Menu OPEN File */
+#mniOpen > .label{
+    -fx-graphic: url("../images/OpenMediaFile.png");
+}
+#mniOpen .accelerator-text{
+    -fx-graphic: none;
+}
+
+/* Menu Turn Up Sound  */
+#mniTurnUpSound > .label{
+    -fx-graphic: url("../images/SoundPlus.png");
+}
+#mniTurnUpSound .accelerator-text{
+    -fx-graphic: none;
+}
+
+/* Menu Mute */
+#mniMute > .label{
+    -fx-graphic: url("../images/SoundMute.png");
+}
+#mniMute .accelerator-text{
+    -fx-graphic: none;
+}
+
+/*Menu Reduce Sound*/
+#mniReduceSound > .label{
+    -fx-graphic: url("../images/SoundSubstract.png");
+}
+#mniReduceSound .accelerator-text{
+    -fx-graphic: none;
+}
+
+/*Menu Play Pause*/
+#mniPlayPause > .label{
+    -fx-graphic: url("../images/mniPlayPause.png");
+}
+#mniPlayPause .accelerator-text{
+    -fx-graphic: none;
+}
+
+/*Menu Stop*/
+#mniStop > .label{
+    -fx-graphic: url("../images/mniStop.png");
+}
+#mniStop .accelerator-text{
+    -fx-graphic: none;
+}
+
+
+

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.effect.DisplacementMap?>
+<?import javafx.scene.effect.FloatMap?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kmedia.FXMLDocumentController">
+   <center>
+      <StackPane fx:id="pane" minHeight="150.0" minWidth="200.0" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="200.0" StackPane.alignment="TOP_CENTER" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </StackPane>
+   </center>
+   <top>
+      <HBox fx:id="hmenu" prefHeight="20.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar fx:id="menuBar" maxHeight="25.0" maxWidth="1.7976931348623157E308" minHeight="25.0" minWidth="600.0" prefHeight="25.0" prefWidth="1700.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Media">
+                  <items>
+                    <MenuItem fx:id="mniOpen" mnemonicParsing="false" onAction="#handleButtonAction" text="Open file...    ">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                        <MenuItem fx:id="mniPlayPause" mnemonicParsing="false" onAction="#PlayVideo" text=" Play / Pause   ">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="P" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="mniStop" mnemonicParsing="false" onAction="#StopVideo" text=" Stop">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#ExitVideo" text="Exit">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Audio">
+                  <items>
+                    <MenuItem fx:id="mniTurnUpSound" mnemonicParsing="false" onAction="#TurnUpSound" text="Turn up the volume">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="T" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                        <MenuItem fx:id="mniReduceSound" mnemonicParsing="false" onAction="#ReduceSound" text="Reduce the volume">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="R" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="mniMute" mnemonicParsing="false" onAction="#Mute" text="Mute">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="M" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <StackPane fx:id="pane1" minHeight="70.0" minWidth="200.0" prefHeight="70.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="20.0" prefWidth="600.0">
+               <children>
+                  <JFXButton fx:id="PlayButton" buttonType="RAISED" onAction="#PlayVideo" prefHeight="40.0" prefWidth="44.0" text=" ">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="PauseButton" buttonType="RAISED" onAction="#PauseVideo" prefHeight="40.0" prefWidth="44.0" text=" ">
+                     <effect>
+                        <Reflection>
+                           <input>
+                              <DisplacementMap>
+                                 <mapData>
+                                    <FloatMap />
+                                 </mapData>
+                              </DisplacementMap>
+                           </input>
+                        </Reflection>
+                     </effect>
+                  </JFXButton>
+                  <JFXButton fx:id="StopButton" buttonType="RAISED" onAction="#StopVideo" prefHeight="40.0" prefWidth="44.0" text=" ">
+                     <effect>
+                        <Reflection>
+                           <input>
+                              <DisplacementMap>
+                                 <mapData>
+                                    <FloatMap />
+                                 </mapData>
+                              </DisplacementMap>
+                           </input>
+                        </Reflection>
+                     </effect>
+                  </JFXButton>
+                  <JFXButton fx:id="SlowerVideoButton" buttonType="RAISED" onAction="#SlowerVideo" prefHeight="40.0" prefWidth="44.0" text=" ">
+                     <effect>
+                        <Reflection>
+                           <input>
+                              <DisplacementMap>
+                                 <mapData>
+                                    <FloatMap />
+                                 </mapData>
+                              </DisplacementMap>
+                           </input>
+                        </Reflection>
+                     </effect>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="SlowVideoButton" buttonType="RAISED" onAction="#SlowVideo" prefHeight="40.0" prefWidth="44.0" text=" ">
+                     <effect>
+                        <Reflection>
+                           <input>
+                              <DisplacementMap>
+                                 <mapData>
+                                    <FloatMap />
+                                 </mapData>
+                              </DisplacementMap>
+                           </input>
+                        </Reflection>
+                     </effect>
+                  </JFXButton>
+                  <JFXButton fx:id="FastVideoButton" buttonType="RAISED" onAction="#FastVideo" prefHeight="40.0" prefWidth="44.0" text=" ">
+                     <effect>
+                        <Reflection>
+                           <input>
+                              <DisplacementMap>
+                                 <mapData>
+                                    <FloatMap />
+                                 </mapData>
+                              </DisplacementMap>
+                           </input>
+                        </Reflection>
+                     </effect>
+                  </JFXButton>
+                  <JFXButton fx:id="FasterVideoButton" buttonType="RAISED" onAction="#FasterVideo" prefHeight="40.0" prefWidth="44.0" text=" ">
+                     <effect>
+                        <Reflection>
+                           <input>
+                              <DisplacementMap>
+                                 <mapData>
+                                    <FloatMap />
+                                 </mapData>
+                              </DisplacementMap>
+                           </input>
+                        </Reflection>
+                     </effect>
+                  </JFXButton>
+                  <ImageView fx:id="SoundSliderIcon" fitHeight="23.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/SoundSliderIcon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="8.0" left="10.0" />
+                     </HBox.margin></ImageView>
+                  <Slider fx:id="sliderSound" value="100.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="5.0" />
+                     </HBox.margin>
+                  </Slider>
+               </children>
+               <opaqueInsets>
+                  <Insets bottom="1.0" />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+            </HBox>
+            <Text fx:id="currentTime" strokeType="OUTSIDE" strokeWidth="0.0" text="00:00" StackPane.alignment="TOP_LEFT">
+               <StackPane.margin>
+                  <Insets left="4.0" right="1.0" />
+               </StackPane.margin>
+            </Text>
+            <JFXSlider fx:id="seekSlider" disable="true" prefHeight="14.0" prefWidth="490.0" value="1.0E-24" StackPane.alignment="TOP_CENTER">
+               <StackPane.margin>
+                  <Insets left="40.0" right="40.0" />
+               </StackPane.margin>
+               <padding>
+                  <Insets top="4.0" />
+               </padding>
+            </JFXSlider>
+            <Text fx:id="totalTime" strokeType="OUTSIDE" strokeWidth="0.0" text="00:00" StackPane.alignment="TOP_RIGHT">
+               <StackPane.margin>
+                  <Insets left="1.0" right="4.0" />
+               </StackPane.margin>
+            </Text>
+         </children>
+      </StackPane>
+   </bottom>
+</BorderPane>
